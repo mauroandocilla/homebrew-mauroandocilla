@@ -8,19 +8,29 @@ class Spix < Formula
   version "0.1.0-beta.1"
 
   on_macos do
-    url "https://github.com/mauroandocilla/homebrew-mauroandocilla/releases/download/v0.1.0-beta.1/homebrew-mauroandocilla_0.1.0-beta.1_darwin_all.tar.gz"
-    sha256 "7ecc0ab9c48c174be6b27f0325141953dd7026c7b3698377d8757c8cd1d2e780"
+    on_intel do
+      url "https://github.com/mauroandocilla/cli-squeezy-pix/releases/download/v0.1.0-beta.1/cli-squeezy-pix_0.1.0-beta.1_darwin_amd64.tar.gz"
+      sha256 "b61dee9ccb3630874e42536daf33c53522f8f3a5524aabe2a6076b173d993c50"
 
-    def install
-      bin.install "spix"
+      def install
+        bin.install "spix"
+      end
+    end
+    on_arm do
+      url "https://github.com/mauroandocilla/cli-squeezy-pix/releases/download/v0.1.0-beta.1/cli-squeezy-pix_0.1.0-beta.1_darwin_arm64.tar.gz"
+      sha256 "eaedd31ca93e5f632ec190d0e594af03f9c3230ab9b43aeec5966387f849cb41"
+
+      def install
+        bin.install "spix"
+      end
     end
   end
 
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/mauroandocilla/homebrew-mauroandocilla/releases/download/v0.1.0-beta.1/homebrew-mauroandocilla_0.1.0-beta.1_linux_amd64.tar.gz"
-        sha256 "4da2417eb1db17f6c3daba30da944a77de768f50db02cc339f926ed684aa71d5"
+        url "https://github.com/mauroandocilla/cli-squeezy-pix/releases/download/v0.1.0-beta.1/cli-squeezy-pix_0.1.0-beta.1_linux_amd64.tar.gz"
+        sha256 "f7f4b78e28093ecca539cd0858883b402ad0d82b6bf56230190ecf99f9b4cbe6"
 
         def install
           bin.install "spix"
@@ -29,8 +39,8 @@ class Spix < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/mauroandocilla/homebrew-mauroandocilla/releases/download/v0.1.0-beta.1/homebrew-mauroandocilla_0.1.0-beta.1_linux_arm64.tar.gz"
-        sha256 "ca637644783d01edf71370f5013654fe7fd55c2ba765976d48e06846ea5bef73"
+        url "https://github.com/mauroandocilla/cli-squeezy-pix/releases/download/v0.1.0-beta.1/cli-squeezy-pix_0.1.0-beta.1_linux_arm64.tar.gz"
+        sha256 "4fff6fc51409ca1ead4b603ac2398523eb1458ad18b6b2f250068bedacabb708"
 
         def install
           bin.install "spix"
