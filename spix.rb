@@ -9,10 +9,10 @@ class Spix < Formula
 
   on_macos do
     url "https://github.com/mauroandocilla/homebrew-mauroandocilla/releases/download/v0.1.0-beta.1/homebrew-mauroandocilla_0.1.0-beta.1_darwin_all.tar.gz"
-    sha256 "3ab3a7ecff7c2355fb2f16c9ae1db7981148f11e16e5fbce9c7d0a17d79dd880"
+    sha256 "f0b53da980256ccf18c43757aba37ee6be55e52044a81d0afb13adcf7d0c397a"
 
     def install
-      bin.install "homebrew-mauroandocilla"
+      bin.install "spix"
     end
   end
 
@@ -20,7 +20,7 @@ class Spix < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/mauroandocilla/homebrew-mauroandocilla/releases/download/v0.1.0-beta.1/homebrew-mauroandocilla_0.1.0-beta.1_linux_amd64.tar.gz"
-        sha256 "b39bc230edf5a4abcf65a697aa75fd14daf804f76cd165df725b356f824d3740"
+        sha256 "47e3ab4f9ef461a42bd148f84ecf866ebfbb5afb779ea0a119315e7fee1911cc"
 
         def install
           bin.install "spix"
@@ -30,12 +30,16 @@ class Spix < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/mauroandocilla/homebrew-mauroandocilla/releases/download/v0.1.0-beta.1/homebrew-mauroandocilla_0.1.0-beta.1_linux_arm64.tar.gz"
-        sha256 "c3a766934d96eaa59b7e1fb7cf32eb415c3437056bcd1bf911a7f94733797b4a"
+        sha256 "b54016d28d5b1cc590e24ee431cb10f554d768d73085aec230b2503f4fa6df84"
 
         def install
           bin.install "spix"
         end
       end
     end
+  end
+
+  test do
+    system "#{bin}/spix", "--version"
   end
 end
