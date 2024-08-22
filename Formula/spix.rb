@@ -10,7 +10,7 @@ class Spix < Formula
   on_macos do
     on_intel do
       url "https://github.com/mauroandocilla/cli-squeezy-pix/releases/download/v0.1.0-beta.1/cli-squeezy-pix_0.1.0-beta.1_darwin_amd64.tar.gz"
-      sha256 "ef57e45f8352fe068f597b48d63913944da48d2e9a49db8ead42fa655f5db2b0"
+      sha256 "f6007267b11b7b68a9c6506a99c87869c26161c07b4d2205a802ea359adc9694"
 
       def install
         bin.install "spix"
@@ -18,7 +18,7 @@ class Spix < Formula
     end
     on_arm do
       url "https://github.com/mauroandocilla/cli-squeezy-pix/releases/download/v0.1.0-beta.1/cli-squeezy-pix_0.1.0-beta.1_darwin_arm64.tar.gz"
-      sha256 "c4672b1a88778118f57d734faf68a852fddce4866ba7ea29ea00b9d3f5329740"
+      sha256 "a79e6d6669491a028626b75071091073a59a800a516f7269648a9a59549a5064"
 
       def install
         bin.install "spix"
@@ -30,7 +30,7 @@ class Spix < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/mauroandocilla/cli-squeezy-pix/releases/download/v0.1.0-beta.1/cli-squeezy-pix_0.1.0-beta.1_linux_amd64.tar.gz"
-        sha256 "e1be234093c5d3b2157e54ef65aa813365f09c953f39137de3e676c69b257b7d"
+        sha256 "c5cff3938b08048b27336770c56c4b64a4036f2f9c338947975a4bcc9ab91810"
 
         def install
           bin.install "spix"
@@ -40,7 +40,7 @@ class Spix < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/mauroandocilla/cli-squeezy-pix/releases/download/v0.1.0-beta.1/cli-squeezy-pix_0.1.0-beta.1_linux_arm64.tar.gz"
-        sha256 "054efdaab1a8d6c4e7b7ba646d40c3bce4d328a7cc955565e1f1872b7b698095"
+        sha256 "224097905acde65b496ccf72e87e5c001a98d7ce0b4f22b7a5b5fa7bfc2114d5"
 
         def install
           bin.install "spix"
